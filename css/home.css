@@ -1,0 +1,91 @@
+/************************
+* CSS for the home page *
+*************************/
+:root {
+    --main-color: rgb(0, 0, 0);
+}
+#welcome-screen {
+    padding-top: 255px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    padding-bottom: 215px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 2px 7px 7px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0,0,0,.5);
+}
+.home-bg {
+    position: fixed;
+    width: 100%;
+    min-width: 1350px;
+    opacity: 1;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: -1;
+}
+#download-redirect-button {
+    border: solid white 2px;
+    font-size: large;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    padding: 15px;
+    left: 50vw;
+    margin-top: 55px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.24);
+}
+#download-redirect-button:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+#download-redirect-button:focus {
+    outline-color: rgba(0,0,0, 0.5);;
+}
+.arrow-down { /*just for positioning and colouring the arrow (css for drawing the arrow is in main.css)*/
+    position: absolute;
+    bottom: 40px;
+    border-color: white;
+}
+.arrow-down-container {
+    display: block;
+}
+
+
+
+/*FOR PHONES*/
+@media only screen and (max-device-width : 600px) {
+    .home-bg {
+        min-width: 500px;
+        height: 100vh;
+        width: auto;
+    }
+    #welcome-screen {
+        padding: 0;
+        height: 80vh;
+        font-size: 20px;
+    }
+    h1 {
+        position: absolute;
+        top: 11vh;
+        left: 50vw;
+        transform: translate(-50%,0);
+        font-size: 5.8vh;
+    }
+    #download-redirect-button {
+        position: absolute;
+        top: 52vh;
+        left: 50vw;
+        width: 50vw;
+        font-size: 15px;
+        transform: translate(-50%,0);
+        padding: 10px;
+    }
+    #project-includes {
+        padding: 50px 5vw 50px 5vw;
+    }
+}

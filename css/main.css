@@ -1,0 +1,228 @@
+/***************************************
+* CSS applicable to all/multiple pages *
+****************************************/
+
+:root {
+    --main-color: rgb(0, 0, 0);
+}
+body {
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-weight: bolder;
+    font-size: 80px;
+}
+h2 {
+    font-weight: bolder;
+    font-size: 55px;
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+h3 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: rgb(167, 50, 50);
+    font-weight: bold;
+}
+h6 {
+    color: grey;
+    font-weight: bolder;
+}
+a {
+    color: goldenrod;
+}
+a:hover {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+.logo {
+    width: 140px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: block;
+}
+.header-block {
+    background-color: white;
+}
+.heading { /*entire heading*/
+    background-color: white !important;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 20px 50px 15px 50px;
+    border-bottom: solid 0.5px;
+    border-color: grey;
+}
+.navbar-nav .nav-item .nav-link {
+    transition-duration: 0.3s;
+}
+.nav-item {
+    margin: 0 30px 0 30px;
+    font-style: normal;
+}
+.navbar-light .navbar-nav .active>.nav-link, 
+.navbar-light .navbar-nav .nav-link.active, /*name of page that we are currently on*/
+.navbar-nav .nav-item:hover .nav-link /*page user is hovering over*/{ 
+    color: var(--main-color);
+}
+.navbar-light .navbar-nav .nav-link { /*names of pages that we are not currently on (heading)*/
+    color: rgba(0,0,0, 0.5);
+} 
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus, .btn:active, .btn:hover {
+    /*so that no outline appears when you click on the hamburger and buttons*/
+    outline: none !important;
+} 
+.navbar-toggler-icon { /*the hamburger (heading)*/
+    width: 25px;
+}
+.arrow-down {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    padding: 10px;
+    transform: translate(-50%, 0) rotate(45deg);
+}
+.profile-icon {
+    border-radius: 50%;
+    width: 200px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+.gen-text-container {
+    text-align: center;
+    padding: 130px 13vw 130px 13vw;
+    background-color: white;
+}
+.p-text-container {
+    width: 50vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+.button-dark{
+    border: solid darkgoldenrod 2px;
+    font-size: large;
+    color: darkgoldenrod;
+    background-color: white;
+    padding: 15px;
+    left: 50vw;
+    margin-top: 55px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+.button-dark:hover {
+    background-color: darkgoldenrod;
+    color: white;
+}
+.button-dark:focus {
+    outline-color: rgba(0,0,0, 0.5);
+}
+.desc-container {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    gap: 20px 55px;
+}
+.desc-image {
+    object-fit: cover;
+    min-width: 150px;
+    height: auto;
+    flex: 2;
+}
+.desc-text {
+    min-width: 350px;
+    flex: 3;
+}
+.link { /*for the red link/whatever the main colour is*/
+    color: rgb(228, 77, 77);
+}
+.link:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.footer { /*entire footer div*/
+    background-color: var(--main-color);
+    color: rgb(200,200,200);
+    padding-top: 50px; 
+    padding-bottom: 64px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+.socials { /*div with social media widgets*/
+    margin-bottom: 5px;
+}
+.icon { /*social media widget*/
+    height: 22px;
+    margin: 8px;
+    transition-duration: 0.2s;
+    transform: translate(0%,-25%);
+}
+.icon:hover {
+    opacity: 0.6;
+}
+#credit {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: left;
+    color: rgba(200, 200,200);
+    border-top: solid 1px rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+/*FOR PHONES*/
+@media only screen and (max-device-width : 600px) {
+    body {
+        text-align: center;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    p, h6{
+        font-size: 15px;
+    }
+    .heading {
+        padding: 0px 0px 15px 20px;
+    }
+    .logo {
+        width: 100px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+    .gen-text-container{
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    .p-text-container{
+        width: 80vw;
+    }
+    .desc-text {
+        min-width: 200px;
+    }
+    .link, .footer-link {
+        text-decoration: underline;
+    }
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 55px;
+        font-size: 14px;
+    }
+    .socials {
+        margin-bottom: 10px;
+    }
+}
