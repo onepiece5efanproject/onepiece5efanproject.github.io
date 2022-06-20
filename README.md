@@ -2,4 +2,4 @@
 
 This website presents the 'One Piece D&D 5th Edition Tabletop Conversion Project' created by @OneWorldHD.
 
-Website made by @xucatherine.
+Website coded by @xucatherine with HTML, CSS, Javascript, and Bootstrap.
